@@ -1,4 +1,4 @@
-<div class="stock-card-container" [class.negative-variation-border]="stock.variation < 0">
+<!-- <div class="stock-card-container" [class.negative-variation-border]="stock.variation < 0">
   <div class="stock-info-container">
     <h2>{{stock.name}}</h2>
     <p>{{stock.date}}</p>
@@ -9,5 +9,29 @@
     <span class="variation" [class.negative-variation]="stock.variation < 0">
       {{variation}}
     </span>
+  </div>
+</div>
+ -->
+
+<div class="flip-card">
+  <div class="flip-card-inner" [class.negative-variation-border]="stock.variation < 0">
+    <div class="flip-card-front">
+      <div class="stock-info-container">
+        <h2>{{stock.name}}</h2>
+        <p>{{stock.date}}</p>
+      </div>
+
+      <div class="stock-value-container">
+        <span class="value">{{stock.price | currency:'BRL'}}</span>
+        <span class="variation" [class.negative-variation]="stock.variation < 0">
+          {{variation}}
+        </span>
+      </div>
+    </div>
+    <div class="flip-card-back">
+      <h1>{{stock.name}}</h1>
+      <p>Description</p>
+      <p>>Text description here<</p>
+    </div>
   </div>
 </div>
