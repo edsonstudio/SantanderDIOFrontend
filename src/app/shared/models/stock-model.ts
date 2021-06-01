@@ -6,6 +6,7 @@ class Stock {
   exclusiveMinimum: boolean;
   variation: number;
   date: string;
+  description: string;
 }
 
 export default Stock;

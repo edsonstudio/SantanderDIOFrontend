@@ -8,6 +8,7 @@ import Stock from '../shared/models/stock-model';
 export class DashboardService {
 
   readonly baseUrl = 'https://bootcamp-java-santander.herokuapp.com/bootcamp';
+  //readonly baseUrl = 'http://localhost:8080/bootcamp';
 
   constructor(private http: HttpClient) { }
 
