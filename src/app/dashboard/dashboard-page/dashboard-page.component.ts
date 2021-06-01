@@ -10,11 +10,14 @@ import { DashboardService } from '../dashboard.service';
 export class DashboardPageComponent implements OnInit {
 
   stocks: Stock[] = [];
+  loader = true;
+  totalCount = 10;
 
   constructor(private dashboardService: DashboardService) { }
 
   ngOnInit(): void {
     this.fetchStocks();
+    this.loader = false;
   }
 
   async fetchStocks(): Promise<void> {

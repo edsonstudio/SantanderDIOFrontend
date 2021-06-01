@@ -1,3 +1,4 @@
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { SharedModule } from './shared/shared.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { LOCALE_ID, NgModule } from '@angular/core';
@@ -8,6 +9,11 @@ import { AppComponent } from './app.component';
 import { registerLocaleData } from '@angular/common';
 
 import localePt from '@angular/common/locales/pt';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { InterceptorService } from './shared/loader/interceptor.service';
+import { FormsModule } from '@angular/forms';
 
 registerLocaleData(localePt);
 
@@ -20,9 +26,14 @@ registerLocaleData(localePt);
     AppRoutingModule,
     DashboardModule,
     SharedModule,
+    MatProgressBarModule,
+    NgxSkeletonLoaderModule,
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [
-    { provide: LOCALE_ID, useValue: 'pt-BR' }
+    { provide: LOCALE_ID, useValue: 'pt-BR' },
+    { provide: HTTP_INTERCEPTORS, useClass:InterceptorService,multi:true }
   ],
   bootstrap: [AppComponent]
 })

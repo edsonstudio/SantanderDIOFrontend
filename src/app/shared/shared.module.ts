@@ -1,3 +1,5 @@
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './layout/header/header.component';
@@ -9,10 +11,13 @@ import { HeaderComponent } from './layout/header/header.component';
     HeaderComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     HeaderComponent,
+
   ]
 })
 export class SharedModule { }
