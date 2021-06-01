@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
 import { StockCardComponent } from './stock-card/stock-card.component';
-import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
@@ -16,7 +15,6 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
   imports: [
     CommonModule,
     HttpClientModule,
-    NgxSkeletonLoaderModule,
     MatProgressBarModule,
     MatProgressSpinnerModule
   ]

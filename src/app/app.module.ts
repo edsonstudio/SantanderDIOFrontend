@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 import { registerLocaleData } from '@angular/common';
 
 import localePt from '@angular/common/locales/pt';
-import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InterceptorService } from './shared/loader/interceptor.service';
@@ -27,7 +26,6 @@ registerLocaleData(localePt);
     DashboardModule,
     SharedModule,
     MatProgressBarModule,
-    NgxSkeletonLoaderModule,
     BrowserAnimationsModule,
     FormsModule
   ],
