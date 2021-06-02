@@ -1,3 +1,4 @@
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { SharedModule } from './shared/shared.module';
 import { DashboardModule } from './dashboard/dashboard.module';
@@ -26,6 +27,7 @@ registerLocaleData(localePt);
     DashboardModule,
     SharedModule,
     MatProgressBarModule,
+    MatProgressSpinnerModule,
     BrowserAnimationsModule,
     FormsModule
   ],

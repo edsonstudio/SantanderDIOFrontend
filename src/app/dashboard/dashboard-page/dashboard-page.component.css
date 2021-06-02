@@ -7,16 +7,20 @@
   justify-content: center;
 }
 
-/* Material Progress bar*/
+/* Material Progress bar - Custom color*/
 ::ng-deep .mat-progress-bar-fill::after {
   background-color: var(--primary-color);
 }
 
 ::ng-deep .mat-progress-bar-buffer {
-  background: #E4E8EB;
+  background: var(--background-color);
 }
 
 ::ng-deep .mat-progress-bar {
   border-radius: 2px;
 }
-/* Material Progress bar*/
+
+/*Material Progress Spinner - Custom color*/
+::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+  stroke: var(--primary-color);
+}

@@ -4,3 +4,6 @@
 <div *ngIf="loaderService.isLoading | async" class="loader-container">
   <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 </div>
+<div *ngIf="loaderService.isLoading | async" class="loader-container-spinner">
+  <mat-spinner style="top: 40%; left: 50%;"></mat-spinner>
+</div>
